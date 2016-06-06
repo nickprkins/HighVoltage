@@ -34,7 +34,9 @@ int numbersSelected = 0;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //Nothing needed here
+    
+    //Give it a name
+    self.navigationItem.title = @"High Voltage";
     
     
 }
@@ -79,61 +81,43 @@ int numbersSelected = 0;
     if (numbersSelected == 2) {
         numbersSelected = 0;
         
-    
-        ///Calculate Watts
-        if (watts == 0 && volts == 0) {
-            watts = (amps * amps) * ohms;
-        }
         
-        if (watts == 0 && amps == 0) {
-            watts = (volts * volts) / ohms;
-        }
-        
-        if (watts == 0 && ohms == 0) {
-            watts = volts * amps;
-        }
-        
-        //Calculate Volts
-        if (volts == 0 && watts == 0) {
-            volts = amps * ohms;
-        }
-        
-        if (volts == 0 && ohms == 0) {
-            volts = watts / amps;
-        }
-        
-        if (volts == 0 && amps == 0) {
-            volts = sqrt(watts * ohms);
-        }
-        
-        //Calculate Amps
-        
-        if (amps == 0 && watts == 0) {
-            amps = volts / ohms;
-        }
-        
-        if (amps == 0 && ohms == 0) {
+        if (watts != 0 && volts != 0) {
+            //calculate
             amps = watts / volts;
-        }
-        
-        if (amps == 0 && volts == 0) {
-            amps = sqrt(watts / ohms);
-        }
-        
-        //Calculate Ohms
-        
-        if (ohms == 0 && watts == 0) {
-            ohms = volts / amps;
-        }
-        
-        if (ohms == 0 && amps == 0) {
             ohms = (volts * volts) / watts;
         }
         
-        if (ohms == 0 && volts == 0) {
+        if (watts != 0 && amps != 0) {
+            //calculate
+            volts = watts / amps;
             ohms = watts/ (amps * amps);
         }
         
+        if (watts != 0 && ohms != 0) {
+            //calculate
+            volts = sqrt(watts * ohms);
+            amps = sqrt(watts / ohms);
+        }
+        
+        if (volts != 0 && amps != 0) {
+            //calculate
+            watts = volts * amps;
+            ohms = volts / amps;
+            
+        }
+        
+        if (volts != 0 && ohms != 0) {
+            //calculate
+            watts = (volts * volts) / ohms;
+            amps = volts / ohms;
+        }
+        
+        if (amps != 0 && ohms != 0) {
+            //calculate
+            watts = (amps * amps) * ohms;
+            volts = amps * ohms;
+        }
         
         if (watts != 0) {
             NSNumber *numWatts = [NSNumber numberWithDouble:watts];
@@ -154,12 +138,6 @@ int numbersSelected = 0;
             NSNumber *numOhms = [NSNumber numberWithDouble:ohms];
             self.ohmsLabel.text = [numOhms stringValue];
         }
-        
-        
-        
-        
-        
-        
     }
     
 }
