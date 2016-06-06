@@ -8,8 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController{
+    
+    UITextField *inputTextField;
+    UISegmentedControl *segmentedControl;
+    
+}
 
+@property (strong, nonatomic) IBOutlet UITextField *inputTextField;
+@property (retain, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
+@property (strong, nonatomic) NSString *theTitle;
 
 @end
 

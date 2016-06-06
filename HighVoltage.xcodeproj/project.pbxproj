@@ -13,6 +13,7 @@
 		8CCAFEBA1D05E19800893EBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CCAFEB81D05E19800893EBD /* Main.storyboard */; };
 		8CCAFEBC1D05E19800893EBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CCAFEBB1D05E19800893EBD /* Assets.xcassets */; };
 		8CCAFEBF1D05E19800893EBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CCAFEBD1D05E19800893EBD /* LaunchScreen.storyboard */; };
+		8CCAFEC81D05E49800893EBD /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CCAFEC71D05E49800893EBD /* TableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		8CCAFEBB1D05E19800893EBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8CCAFEBE1D05E19800893EBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8CCAFEC01D05E19800893EBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CCAFEC61D05E49800893EBD /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		8CCAFEC71D05E49800893EBD /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 				8CCAFEB51D05E19800893EBD /* ViewController.h */,
 				8CCAFEB61D05E19800893EBD /* ViewController.m */,
 				8CCAFEB81D05E19800893EBD /* Main.storyboard */,
+				8CCAFEC61D05E49800893EBD /* TableViewController.h */,
+				8CCAFEC71D05E49800893EBD /* TableViewController.m */,
 				8CCAFEBB1D05E19800893EBD /* Assets.xcassets */,
 				8CCAFEBD1D05E19800893EBD /* LaunchScreen.storyboard */,
 				8CCAFEC01D05E19800893EBD /* Info.plist */,
@@ -153,6 +158,7 @@
 				8CCAFEB71D05E19800893EBD /* ViewController.m in Sources */,
 				8CCAFEB41D05E19800893EBD /* AppDelegate.m in Sources */,
 				8CCAFEB11D05E19800893EBD /* main.m in Sources */,
+				8CCAFEC81D05E49800893EBD /* TableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
